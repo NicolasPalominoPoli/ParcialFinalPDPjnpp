@@ -5,10 +5,10 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 
 const MainGame = () => {
-  const { handlerCards, count } = useContext(UsersContext);
+  const { handlerCards, winner } = useContext(UsersContext);
   return (
     <div>
-      <NavLink to = {count > 16 ? "/gameover" : "/game" }>
+      <NavLink to = {winner !== "" ? "/gameover" : "/game" }>
         <Button variant="contained" onClick={handlerCards}>
           Cards
         </Button>

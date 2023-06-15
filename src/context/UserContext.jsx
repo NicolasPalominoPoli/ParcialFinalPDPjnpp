@@ -50,7 +50,15 @@ const UsersProvider = ({ children }) => {
     if(data.cards[0].value == playerOneCards[0].value)
     {
       console.log("SON IGUALES LAS LETRAS");
-      if(data.cards[0].suit == 'CLUBS' && playerOneCards[0].suit == 'DIAMONDS' || data.cards[0].suit == 'HEARTS' && playerOneCards[0].suit == 'SPADES')
+      
+      if(data.cards[0].suit == 'CLUBS' && playerOneCards[0].suit == 'DIAMONDS' || data.cards[0].suit == 'DIAMONDS' && playerOneCards[0].suit == 'CLUBS')
+      {
+        console.log("SON PINTAS OPUESTAS");
+        setWinner(`El jugador ${users[0].name} ha ganado el juego`);
+        setCount(52);
+        
+      }
+      else if(data.cards[0].suit == 'HEARTS' && playerOneCards[0].suit == 'SPADES' || data.cards[0].suit == 'SPADES' && playerOneCards[0].suit == 'HEARTS')
       {
         console.log("SON PINTAS OPUESTAS");
         setWinner(`El jugador ${users[0].name} ha ganado el juego`);
@@ -64,6 +72,7 @@ const UsersProvider = ({ children }) => {
   const handlerCards = () => {
     if (count < 52) {
       setCount(count + 1);
+      console.log(count);
       getplayerOneCard();
     }
   };
