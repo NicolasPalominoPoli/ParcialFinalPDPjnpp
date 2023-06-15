@@ -18,7 +18,7 @@ const UsersProvider = ({ children }) => {
   const [winner, setWinner] = useState('');
 
   const getplayerOneInitialCards = async () => {
-    const url = `https://deckofcardsapi.com/api/deck/${GameId}/draw/?count=10`;
+    const url = `https://deckofcardsapi.com/api/deck/${GameId}/draw/?count=1`;
     const response = await fetch(url);
     const data = await response.json();
     setplayerOneCards(data.cards);
