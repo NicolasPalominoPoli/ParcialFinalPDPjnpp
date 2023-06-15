@@ -13,7 +13,7 @@ var GameId = "";
 const UsersProvider = ({ children }) => {
   const [Users, setUsers] = useState(users);
   const [playerOneCards, setplayerOneCards] = useState([]);
-  const [playerTwoCards, setplayerTwoCards] = useState([]);
+  const [auxCard, setAuxCard] = useState([]);
   const [count, setCount] = useState(1);
   const [winner, setWinner] = useState('');
 
