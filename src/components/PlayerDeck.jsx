@@ -15,13 +15,6 @@ const PlayerDeck = () => {
             <Card key={card.code} imagen={card.image} />
         ))}
       </ImageList>
-      <h3>Player {Users.find(user => user.id==2).name}</h3>
-      <p>Cards obtained</p>
-      <ImageList sx={{ width: 1300, height: 164 }} cols={10} rowHeight={164}>
-        {playerTwoCards.map((card) => (
-            <Card key={card.code} imagen={card.image} />
-        ))}
-      </ImageList>
     </div>
   );
 };
