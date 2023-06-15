@@ -33,7 +33,7 @@ const UsersProvider = ({ children }) => {
       const { data } = await axios(url);
       GameId = data.deck_id;
       console.log(GameId);
-      //getplayerOneInitialCards();
+      getplayerOneInitialCards();
     };
     query();
   };
