@@ -25,15 +25,15 @@ const UsersProvider = ({ children }) => {
   };
 
   const handlerUsers = () => {
-    const newUser = { ...u, name: document.getElementById("1").value };
-    setUsers(newUser);
+    const newUsers = { Users, name: document.getElementById("1").value };
+    setUsers(newUsers);
 
     const query = async () => {
       const url = `https://deckofcardsapi.com/api/deck/new/shuffle/`;
       const { data } = await axios(url);
       GameId = data.deck_id;
       console.log(GameId);
-      getplayerOneInitialCards();
+      //getplayerOneInitialCards();
     };
     query();
   };

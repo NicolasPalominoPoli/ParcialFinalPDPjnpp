@@ -7,7 +7,7 @@ const PlayerDeck = () => {
   const { Users, playerOneCards, playerTwoCards } = useContext(UsersContext);
   return (
     <div>
-      <h3>Player {Users.find(user => user.id==1).name}</h3>
+      <h3>Player {Users.name}</h3>
       <p>Cards obtained</p>
       <ImageList sx={{ width: 1300, height: 164 }} cols={10} rowHeight={164}>
         {playerOneCards.map((card) => (
